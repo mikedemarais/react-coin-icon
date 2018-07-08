@@ -1,0 +1,40 @@
+{
+  "name": "react-coin-icon",
+  "version": "0.1.0",
+  "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
+  "author": "Michael Demarais",
+  "main": "lib/index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balance-io/react-coin-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/balance-io/react-coin-icons/issues"
+  },
+  "scripts": {
+    "clear-icons": "rm -f  src/icons/*",
+    "svg-to-react": "svgr --native --svg-attributes viewBox='0 0 32 32' --template svg-template.js -d ./src/icons svg && create-index ./src/icons",
+    "build": "npm run svg-to-react && npm run build:js",
+    "build:js": "babel src --out-dir lib"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-react-native": "^4.0.0",
+    "create-index": "^2.3.0"
+  },
+  "dependencies": {
+    "@svgr/cli": "^2.0.0",
+    "styled-components": "^3.3.3",
+    "svgs": "^3.2.1"
+  }
+}
