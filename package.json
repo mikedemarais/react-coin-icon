@@ -4,7 +4,7 @@
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
-  "private": true,
+  "license": "GPL-3",
   "repository": {
     "type": "git",
     "url": "https://github.com/balance-io/react-coin-icons.git"
