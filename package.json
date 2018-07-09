@@ -1,6 +1,6 @@
 {
   "name": "react-coin-icon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
@@ -14,9 +14,10 @@
   },
   "scripts": {
     "clear-icons": "rm -f  src/icons/*",
-    "svg-to-react": "svgr --native --svg-attributes viewBox='0 0 32 32' --template svg-template.js -d ./src/icons svg && create-index ./src/icons",
     "build": "npm run svg-to-react && npm run build:js",
-    "build:js": "babel src --out-dir lib"
+    "build:js": "babel src --out-dir lib",
+    "prepublish": "npm run build",
+    "svg-to-react": "svgr --native --svg-attributes viewBox='0 0 32 32' --template svg-template.js -d ./src/icons svg && create-index ./src/icons"
   },
   "peerDependencies": {
     "prop-types": "^15.6.0",
@@ -25,7 +26,7 @@
     "react-native-svg": "*"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
@@ -35,6 +36,6 @@
   "dependencies": {
     "@svgr/cli": "^2.0.0",
     "styled-components": "^3.3.3",
-    "svgs": "^3.2.1"
+    "svgs": "github:Tvrqvoise/svgs#5137d86dfab6390df4917716a52fb5a572914358"
   }
 }
