@@ -19,12 +19,16 @@ const CoinIcon = ({ fallbackRenderer, size, symbol, ...props }) => {
     ? symbol[0].toUpperCase() + symbol.slice(1).toLowerCase()
     : null;
 
+  const iconExists = Object.keys(CoinIcons).includes(formattedSymbol);
+  const iconElement = iconExists ? CoinIcons[formattedSymbol] : fallbackRenderer;
+
   return (
     <Container {...props} size={size}>
-      {Object.keys(CoinIcons).includes(formattedSymbol)
-        ? createElement(CoinIcons[formattedSymbol], { height: size, width: size })
-        : createElement(fallbackRenderer, { symbol: formattedSymbol })
-      }
+      {createElement(iconElement, {
+        height: size,
+        symbol: formattedSymbol,
+        width: size,
+      })}
     </Container>
   );
 }
