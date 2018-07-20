@@ -4,8 +4,8 @@ import styled from 'styled-components/primitives';
 
 const buildFallbackFontSize = ({ symbol, width }) => {
   if (!symbol) return 0;
-  else if ((width < 30) || (symbol.length > 4)) return 9;
-  else if (symbol.length === 4) return 11;
+  else if ((width < 30) || (symbol.length === 4)) return 11;
+  else if (symbol.length > 4) return 9;
   return 13;
 };
 
@@ -32,7 +32,7 @@ const FallbackIcon = ({
   ...props,
 }) => (
   <Container {...props}>
-    <Text symbol={symbol} textStyles={textStyles}>
+    <Text symbol={symbol} textStyles={textStyles} width={width}>
       {symbol.substring(0, (width < 30) ? 1 : 5)}
     </Text>
   </Container>
