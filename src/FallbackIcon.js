@@ -30,13 +30,22 @@ const FallbackIcon = ({
   textStyles,
   width,
   ...props,
-}) => (
-  <Container {...props}>
-    <Text symbol={symbol} textStyles={textStyles} width={width}>
-      {symbol.substring(0, (width < 30) ? 1 : 5)}
-    </Text>
-  </Container>
-);
+}) => {
+  const symbolWithoutSpecialCharacters = symbol.replace(/[^a-zA-Z0-9]/g, '');
+  const formattedSymbol = symbolWithoutSpecialCharacters.substring(0, (width < 30) ? 1 : 5);
+
+  return (
+    <Container {...props}>
+      <Text
+        symbol={formattedSymbol}
+        textStyles={textStyles}
+        width={width}
+      >
+        {formattedSymbol}
+      </Text>
+    </Container>
+  );
+}
 
 FallbackIcon.propTypes = {
   bgColor: PropTypes.string,
