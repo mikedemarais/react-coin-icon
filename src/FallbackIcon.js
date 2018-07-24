@@ -50,7 +50,10 @@ const FallbackIcon = ({
 FallbackIcon.propTypes = {
   bgColor: PropTypes.string,
   symbol: PropTypes.string,
-  textStyles: PropTypes.string,
+  textStyles: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.string),
+    PropTypes.string,
+  ]),
 };
 
 FallbackIcon.defaultProps = {
