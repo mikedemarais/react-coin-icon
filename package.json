@@ -1,6 +1,6 @@
 {
   "name": "react-coin-icon",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@svgr/cli": "^2.0.0",
-    "styled-components": "^3.3.3",
+    "styled-components": "3.3.3",
     "svgs": "github:Tvrqvoise/svgs#5137d86dfab6390df4917716a52fb5a572914358"
   }
 }
