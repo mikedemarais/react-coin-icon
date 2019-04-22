@@ -17,7 +17,7 @@ const Container = styled.View`
 const CoinIcon = ({ fallbackRenderer, size, symbol, ...props }) => {
   const formattedSymbol = symbol
     ? symbol[0].toUpperCase() + symbol.slice(1).toLowerCase()
-    : null;
+    : '';
 
   const iconExists = Object.keys(CoinIcons).includes(formattedSymbol);
   const iconElement = iconExists ? CoinIcons[formattedSymbol] : fallbackRenderer;

@@ -1,16 +1,16 @@
 {
   "name": "react-coin-icon",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
   "license": "GPL-3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/balance-io/react-coin-icons.git"
+    "url": "https://github.com/mikedemarais/react-coin-icons.git"
   },
   "bugs": {
-    "url": "https://github.com/balance-io/react-coin-icons/issues"
+    "url": "https://github.com/mikedemarais/react-coin-icons/issues"
   },
   "scripts": {
     "clear-icons": "rm -f  src/icons/*",
