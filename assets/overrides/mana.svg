@@ -1,0 +1,32 @@
+<svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="85.355%" y1="14.645%" x2="14.645%" y2="85.355%" id="b">
+            <stop stop-color="#FF2D55" offset="0%"/>
+            <stop stop-color="#FFBC5B" offset="100%"/>
+        </linearGradient>
+        <circle id="a" cx="16" cy="16" r="16"/>
+        <linearGradient x1="49.966%" y1="0%" x2="49.966%" y2="100%" id="c">
+            <stop stop-color="#A524B3" offset="0%"/>
+            <stop stop-color="#FF2D55" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="49.966%" y1="0%" x2="49.966%" y2="100%" id="e">
+            <stop stop-color="#A524B3" offset="0%"/>
+            <stop stop-color="#FF2D55" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="d" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="url(#b)" xlink:href="#a"/>
+        <path fill="url(#c)" fill-rule="nonzero" mask="url(#d)" d="M11.336 10.4l-1.288 12h11.288z"/>
+        <path fill="#FFF" fill-rule="nonzero" mask="url(#d)" d="M1.336 22.4h10v-12z"/>
+        <path d="M1.6 25.6a18.25 18.25 0 0 0 3.8 3.2h22.8a18.25 18.25 0 0 0 3.8-3.2H1.6z" fill="#FC9965" fill-rule="nonzero" mask="url(#d)"/>
+        <path d="M4 28.8c3.451 2.51 7.75 4 12.4 4s8.949-1.49 12.4-4H4z" fill="#FF2D55" fill-rule="nonzero" mask="url(#d)"/>
+        <path fill="url(#e)" fill-rule="nonzero" mask="url(#d)" d="M21.464 16.8l-1.25 8.8H28.8z"/>
+        <path d="M20.663 22.4H-1.728a15.639 15.639 0 0 0 2.074 3.2h20.326v-3.2h-.009z" fill="#FFBC5B" fill-rule="nonzero" mask="url(#d)"/>
+        <path fill="#FFF" fill-rule="nonzero" mask="url(#d)" d="M14.136 25.6h7.328v-8.8z"/>
+        <circle fill="#FFC95B" fill-rule="nonzero" mask="url(#d)" cx="21.464" cy="10.4" r="4"/>
+        <circle fill="#FFC95B" fill-rule="nonzero" mask="url(#d)" cx="11.336" cy="6" r="2"/>
+    </g>
+</svg>

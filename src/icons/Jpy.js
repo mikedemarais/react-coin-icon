@@ -1,7 +1,8 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Jpy = props => (
-  <Svg viewBox="0 0 32 32" height={32} width={32} {...props}>
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgJpy = props => (
+  <Svg height={32} width={32} viewBox="0 0 32 32" {...props}>
     <G fill="none" fillRule="evenodd">
       <Circle cx={16} cy={16} fill="#eac749" r={16} />
       <Path
@@ -12,4 +13,4 @@ const Jpy = props => (
   </Svg>
 );
 
-export default Jpy;
+export default SvgJpy;

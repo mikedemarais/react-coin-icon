@@ -1,15 +1,17 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Bat = props => (
-  <Svg viewBox="0 0 32 32" width={32} height={32} {...props}>
-    <G fill="none">
-      <Circle cx={16} cy={16} r={16} fill="#FF5000" />
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgBat = props => (
+  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
+    <G fill="none" fillRule="evenodd">
+      <Circle fill="#FF5000" cx={16} cy={16} r={16} />
       <Path
+        d="M6.4 22.32L16.049 6 25.6 22.298l-19.2.022zm9.626-9.715l-3.944 6.514h7.906l-3.962-6.514z"
         fill="#FFF"
-        d="M6 23.5l10.051-17L26 23.477 6 23.5zm10.027-10.12l-4.108 6.786h8.235l-4.127-6.786z"
+        fillRule="nonzero"
       />
     </G>
   </Svg>
 );
 
-export default Bat;
+export default SvgBat;

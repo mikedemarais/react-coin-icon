@@ -1,3 +1,4 @@
+import { toLower, upperFirst } from 'lodash';
 import PropTypes from 'prop-types';
 import React, { createElement } from 'react';
 import styled from 'styled-components/primitives';
@@ -15,16 +16,12 @@ const Container = styled.View`
 `;
 
 const CoinIcon = ({ fallbackRenderer, size, symbol, ...props }) => {
-  const formattedSymbol = symbol
-    ? symbol[0].toUpperCase() + symbol.slice(1).toLowerCase()
-    : '';
-
-  const iconExists = Object.keys(CoinIcons).includes(formattedSymbol);
-  const iconElement = iconExists ? CoinIcons[formattedSymbol] : fallbackRenderer;
+  const formattedSymbol = upperFirst(toLower(symbol));
+  const renderer = CoinIcons[formattedSymbol] || fallbackRenderer;
 
   return (
     <Container {...props} size={size}>
-      {createElement(iconElement, {
+      {createElement(renderer, {
         height: size,
         symbol: formattedSymbol,
         width: size,
@@ -44,4 +41,4 @@ CoinIcon.defaultProps = {
   size: 32,
 };
 
-export default CoinIcon;
+export default React.memo(CoinIcon);

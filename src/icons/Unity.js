@@ -1,7 +1,8 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Unity = props => (
-  <Svg viewBox="0 0 32 32" height={32} width={32} {...props}>
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgUnity = props => (
+  <Svg height={32} width={32} viewBox="0 0 32 32" {...props}>
     <G fill="none" fillRule="evenodd">
       <Circle cx={16} cy={16} fill="#f58634" r={16} />
       <G fill="#fff" fillRule="nonzero">
@@ -15,4 +16,4 @@ const Unity = props => (
   </Svg>
 );
 
-export default Unity;
+export default SvgUnity;

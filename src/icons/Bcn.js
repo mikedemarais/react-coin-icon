@@ -1,7 +1,8 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Bcn = props => (
-  <Svg viewBox="0 0 32 32" width={32} height={32} {...props}>
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgBcn = props => (
+  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
     <G fill="none">
       <Circle cx={15.999} cy={15.999} r={15.999} fill="#F04086" />
       <Path
@@ -12,4 +13,4 @@ const Bcn = props => (
   </Svg>
 );
 
-export default Bcn;
+export default SvgBcn;

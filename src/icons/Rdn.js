@@ -1,7 +1,8 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Rdn = props => (
-  <Svg viewBox="0 0 32 32" width={32} height={32} {...props}>
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgRdn = props => (
+  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
     <G fill="none">
       <Circle cx={16} cy={16} r={16} fill="#2A2A2A" />
       <Path
@@ -12,4 +13,4 @@ const Rdn = props => (
   </Svg>
 );
 
-export default Rdn;
+export default SvgRdn;

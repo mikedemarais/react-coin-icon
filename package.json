@@ -1,6 +1,6 @@
 {
   "name": "react-coin-icon",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
@@ -13,29 +13,34 @@
     "url": "https://github.com/mikedemarais/react-coin-icons/issues"
   },
   "scripts": {
-    "clear-icons": "rm -f  src/icons/*",
+    "clear-icons": "rm -f src/icons/*",
     "build": "npm run svg-to-react && npm run build:js",
     "build:js": "babel src --out-dir lib",
     "prepublish": "npm run build",
-    "svg-to-react": "svgr --native --svg-attributes viewBox='0 0 32 32' --template svg-template.js -d ./src/icons svg && create-index ./src/icons"
+    "svg-originals": "svgr -d ./src/icons ./assets/originals",
+    "svg-overrides": "svgr -d ./src/icons ./assets/overrides",
+    "svg-to-react": "npm run svg-originals && npm run svg-overrides && create-index ./src/icons"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.0",
+    "prop-types": "^15.7.2",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "*"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-react-native": "^4.0.0",
-    "create-index": "^2.3.0"
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-styled-components": "^1.10.1",
+    "create-index": "^2.4.0",
+    "metro-react-native-babel-preset": "^0.54.1"
   },
   "dependencies": {
-    "@svgr/cli": "^2.0.0",
-    "styled-components": "3.3.3",
-    "svgs": "github:Tvrqvoise/svgs#5137d86dfab6390df4917716a52fb5a572914358"
+    "@svgr/cli": "^4.3.0",
+    "lodash": "^4.17.11",
+    "styled-components": "4.3.1"
   }
 }

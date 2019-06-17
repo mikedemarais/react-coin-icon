@@ -1,7 +1,8 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Maid = props => (
-  <Svg viewBox="0 0 32 32" width={32} height={32} {...props}>
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgMaid = props => (
+  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
     <G fill="none" fillRule="evenodd">
       <Circle cx={16} cy={16} r={16} fill="#5592D7" />
       <G fill="#FFF" fillRule="nonzero">
@@ -19,4 +20,4 @@ const Maid = props => (
   </Svg>
 );
 
-export default Maid;
+export default SvgMaid;

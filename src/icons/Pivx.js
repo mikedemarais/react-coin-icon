@@ -1,7 +1,8 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Pivx = props => (
-  <Svg viewBox="0 0 32 32" width={32} height={32} {...props}>
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgPivx = props => (
+  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
     <G fill="none" fillRule="evenodd">
       <Circle cx={16} cy={16} r={16} fill="#5E4778" fillRule="nonzero" />
       <Path
@@ -13,4 +14,4 @@ const Pivx = props => (
   </Svg>
 );
 
-export default Pivx;
+export default SvgPivx;

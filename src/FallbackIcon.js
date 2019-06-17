@@ -60,4 +60,4 @@ FallbackIcon.defaultProps = {
   bgColor: '#3A3D51',
 };
 
-export default FallbackIcon;
+export default React.memo(FallbackIcon);

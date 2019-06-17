@@ -1,7 +1,8 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Arn = props => (
-  <Svg viewBox="0 0 32 32" height={32} width={32} {...props}>
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgArn = props => (
+  <Svg height={32} width={32} viewBox="0 0 32 32" {...props}>
     <G fill="none">
       <Circle cx={16} cy={16} fill="#0092b5" r={16} />
       <Path
@@ -12,4 +13,4 @@ const Arn = props => (
   </Svg>
 );
 
-export default Arn;
+export default SvgArn;

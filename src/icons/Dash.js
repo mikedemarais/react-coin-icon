@@ -1,15 +1,16 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "svgs";
-const Dash = props => (
-  <Svg viewBox="0 0 32 32" width={32} height={32} {...props}>
-    <G fill="none" fillRule="evenodd">
-      <Circle cx={16} cy={16} r={16} fill="#1C75BC" />
-      <Path
-        fill="#FFF"
-        d="M26.571 12.971l-2.038 6.381s-1.257 3.181-4.247 3.181H5.866l1.03-3.18h13.066l2.057-6.382H8.971l1.01-3.18h14.343c3.143 0 2.247 3.18 2.247 3.18zm-20.19 1.715h7.733l-.99 2.952H5.37l1.01-2.952z"
-      />
+import Svg, { G, Circle, Path } from "react-native-svg";
+
+const SvgDash = props => (
+  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
+    <G fill="none">
+      <Circle cx={16} cy={16} r={16} fill="#008CE7" />
+      <G fill="#FFF">
+        <Path d="M19.086 8.004H11.81l-.602 3.367 6.562.01c3.231 0 4.19 1.173 4.159 3.12-.014.998-.449 2.686-.633 3.23-.497 1.46-1.521 3.122-5.359 3.117l-6.378-.004-.602 3.371h7.257c2.559 0 3.649-.299 4.8-.83 2.554-1.178 4.075-3.701 4.686-6.994.906-4.9-.224-8.387-6.615-8.387z" />
+        <Path d="M15.807 15.798c.237-.985.312-1.38.312-1.38H8.673c-1.904 0-2.176 1.24-2.357 1.99-.237.981-.312 1.381-.312 1.381h7.447c1.903 0 2.175-1.24 2.356-1.991z" />
+      </G>
     </G>
   </Svg>
 );
 
-export default Dash;
+export default SvgDash;
