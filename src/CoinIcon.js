@@ -15,13 +15,20 @@ const Container = styled.View`
   width: ${({ size }) => (size)};
 `;
 
-const CoinIcon = ({ fallbackRenderer, size, symbol, ...props }) => {
+const CoinIcon = ({
+  bgColor,
+  fallbackRenderer,
+  size,
+  symbol,
+  ...props
+}) => {
   const formattedSymbol = upperFirst(toLower(symbol));
   const renderer = CoinIcons[formattedSymbol] || fallbackRenderer;
 
   return (
     <Container {...props} size={size}>
       {createElement(renderer, {
+        bgColor,
         height: size,
         symbol: formattedSymbol,
         width: size,
@@ -31,6 +38,7 @@ const CoinIcon = ({ fallbackRenderer, size, symbol, ...props }) => {
 }
 
 CoinIcon.propTypes = {
+  bgColor: PropTypes.string,
   fallbackRenderer: PropTypes.func.isRequired,
   size: PropTypes.number.isRequired,
   symbol: PropTypes.string.isRequired,
