@@ -2,7 +2,7 @@ import React from "react";
 import Svg, { G, Circle, Path } from "react-native-svg";
 
 const SvgMft = props => (
-  <Svg width={40} height={40} viewBox="0 0 40 40" {...props}>
+  <Svg width={40} height={40} viewBox="0 0 32 32" {...props}>
     <G fill="none">
       <Circle fill="#DA1157" cx={16} cy={16} r={16} />
       <Path

@@ -2,7 +2,7 @@ import React from "react";
 import Svg, { G, Circle, Path } from "react-native-svg";
 
 const SvgUnity = props => (
-  <Svg height={40} width={40} viewBox="0 0 40 40" {...props}>
+  <Svg height={40} width={40} viewBox="0 0 32 32" {...props}>
     <G fill="none" fillRule="evenodd">
       <Circle cx={16} cy={16} fill="#f58634" r={16} />
       <G fill="#fff" fillRule="nonzero">

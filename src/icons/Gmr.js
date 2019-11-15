@@ -2,7 +2,7 @@ import React from "react";
 import Svg, { G, Circle, Path } from "react-native-svg";
 
 const SvgGmr = props => (
-  <Svg width={40} height={40} viewBox="0 0 40 40" {...props}>
+  <Svg width={40} height={40} viewBox="0 0 32 32" {...props}>
     <G fill="none" fillRule="evenodd">
       <Circle cx={16} cy={16} r={16} fill="#372D2C" fillRule="nonzero" />
       <Path d="M22.885 23.604a12.23 12.23 0 001.27-1.915 12.82 12.82 0 01-1.289 1.932.228.228 0 00.019-.017zm-15.868-3.91a9.732 9.732 0 01-.228-4.48l-.005-.01a9.755 9.755 0 00.761 5.911c.421.89.945 1.726 1.562 2.492a.241.241 0 00.028.024 12.5 12.5 0 01-1.584-2.516 10.01 10.01 0 01-.534-1.421zm17.963 0a9.731 9.731 0 00-.002 0h.002zM9.43 18.53l.136-.067.12-.058a15.16 15.16 0 00-.256.125z" />

@@ -17,8 +17,8 @@
     "build": "npm run svg-to-react && npm run build:js",
     "build:js": "babel src --out-dir lib",
     "prepublish": "npm run build",
-    "svg-originals": "svgr -d ./src/icons ./assets/originals",
-    "svg-overrides": "svgr -d ./src/icons ./assets/overrides",
+    "svg-originals": "svgr --config-file originals-svgr.config.js -d ./src/icons ./assets/originals",
+    "svg-overrides": "svgr --config-file overrides-svgr.config.js -d ./src/icons ./assets/overrides",
     "svg-to-react": "npm run svg-originals && npm run svg-overrides && create-index ./src/icons"
   },
   "peerDependencies": {
