@@ -2,7 +2,7 @@ import React from "react";
 import Svg, { Path } from "react-native-svg";
 
 const SvgKin = props => (
-  <Svg width={32} height={32} fill="none" viewBox="0 0 32 32" {...props}>
+  <Svg width={40} height={40} fill="none" viewBox="0 0 40 40" {...props}>
     <Path
       fillRule="evenodd"
       clipRule="evenodd"

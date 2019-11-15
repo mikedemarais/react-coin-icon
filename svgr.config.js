@@ -3,8 +3,8 @@
 module.exports = {
   native: true,
   svgProps: {
-    height: 32,
-    viewBox: "0 0 32 32",
-    width: 32,
+    height: 40,
+    viewBox: "0 0 40 40",
+    width: 40,
   },
 }

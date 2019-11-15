@@ -9,7 +9,7 @@ import Svg, {
 } from "react-native-svg";
 
 const SvgAeur = props => (
-  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
+  <Svg width={40} height={40} viewBox="0 0 40 40" {...props}>
     <Defs>
       <LinearGradient x1="50%" y1="0%" x2="50%" y2="143.239%" id="aeur_svg__a">
         <Stop stopColor="#FFF" offset="0%" />
