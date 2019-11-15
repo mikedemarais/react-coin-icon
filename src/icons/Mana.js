@@ -9,7 +9,7 @@ import Svg, {
 } from "react-native-svg";
 
 const SvgMana = props => (
-  <Svg width={40} height={40} fill="none" viewBox="0 0 32 32" {...props}>
+  <Svg width={32} height={32} fill="none" viewBox="0 0 32 32" {...props}>
     <Path
       fillRule="evenodd"
       clipRule="evenodd"
