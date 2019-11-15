@@ -1,15 +1,20 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
 
 const SvgDai = props => (
-  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
-    <G fill="none" fillRule="evenodd">
-      <Circle fill="#FEBE44" cx={16} cy={16} r={16} />
-      <Path
-        d="M16 3.92l12 11.999-12 12-12-12L16 3.92zM8.437 14.814a.193.193 0 0 0 .144.32h4.913a.193.193 0 0 0 .144-.064l2.132-2.393a.193.193 0 0 1 .281-.007l2.384 2.407a.193.193 0 0 0 .137.057h4.91a.192.192 0 0 0 .141-.323l-7.572-8.264a.193.193 0 0 0-.286.002l-7.328 8.265z"
-        fill="#FFF"
-      />
-    </G>
+  <Svg width={40} height={40} fill="none" viewBox="0 0 32 32" {...props}>
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z"
+      fill="#FEBE44"
+    />
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M35 19.899L20 4.9 5 19.899l15 14.999 15-15zm-24.274-.981a.241.241 0 01-.18-.401l9.16-10.33a.241.241 0 01.358-.004l9.465 10.331a.241.241 0 01-.177.404h-6.137a.241.241 0 01-.171-.072l-2.98-3.01a.241.241 0 00-.351.01l-2.666 2.991a.24.24 0 01-.18.081h-6.14z"
+      fill="#fff"
+    />
   </Svg>
 );
 

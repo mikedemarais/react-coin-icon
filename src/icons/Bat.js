@@ -1,16 +1,20 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
 
 const SvgBat = props => (
-  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
-    <G fill="none" fillRule="evenodd">
-      <Circle fill="#FF5000" cx={16} cy={16} r={16} />
-      <Path
-        d="M6.4 22.32L16.049 6 25.6 22.298l-19.2.022zm9.626-9.715l-3.944 6.514h7.906l-3.962-6.514z"
-        fill="#FFF"
-        fillRule="nonzero"
-      />
-    </G>
+  <Svg width={40} height={40} fill="none" viewBox="0 0 32 32" {...props}>
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z"
+      fill="#FF5000"
+    />
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M20.061 7.5L8 27.9l24-.028L20.061 7.5zm-4.958 16.4l4.93-8.144 4.952 8.143h-9.882z"
+      fill="#fff"
+    />
   </Svg>
 );
 

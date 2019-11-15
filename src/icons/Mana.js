@@ -1,114 +1,99 @@
 import React from "react";
 import Svg, {
+  Path,
+  Mask,
+  G,
   Defs,
   LinearGradient,
-  Stop,
-  Circle,
-  G,
-  Mask,
-  Use,
-  Path
+  Stop
 } from "react-native-svg";
 
 const SvgMana = props => (
-  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
-    <Defs>
-      <LinearGradient
-        x1="85.355%"
-        y1="14.645%"
-        x2="14.645%"
-        y2="85.355%"
-        id="mana_svg__b"
-      >
-        <Stop stopColor="#FF2D55" offset="0%" />
-        <Stop stopColor="#FFBC5B" offset="100%" />
-      </LinearGradient>
-      <Circle id="mana_svg__a" cx={16} cy={16} r={16} />
-      <LinearGradient
-        x1="49.966%"
-        y1="0%"
-        x2="49.966%"
-        y2="100%"
-        id="mana_svg__c"
-      >
-        <Stop stopColor="#A524B3" offset="0%" />
-        <Stop stopColor="#FF2D55" offset="100%" />
-      </LinearGradient>
-      <LinearGradient
-        x1="49.966%"
-        y1="0%"
-        x2="49.966%"
-        y2="100%"
-        id="mana_svg__e"
-      >
-        <Stop stopColor="#A524B3" offset="0%" />
-        <Stop stopColor="#FF2D55" offset="100%" />
-      </LinearGradient>
-    </Defs>
-    <G fill="none" fillRule="evenodd">
-      <Mask id="mana_svg__d" fill="#fff">
-        <Use xlinkHref="#mana_svg__a" />
-      </Mask>
-      <Use fill="url(#mana_svg__b)" xlinkHref="#mana_svg__a" />
+  <Svg width={40} height={40} fill="none" viewBox="0 0 32 32" {...props}>
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z"
+      fill="url(#mana_svg__paint0_linear)"
+    />
+    <Mask
+      id="mana_svg__a"
+      maskUnits="userSpaceOnUse"
+      x={0}
+      y={0}
+      width={40}
+      height={40}
+    >
       <Path
-        fill="url(#mana_svg__c)"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
-        d="M11.336 10.4l-1.288 12h11.288z"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z"
+        fill="#fff"
       />
+    </Mask>
+    <G mask="url(#mana_svg__a)">
       <Path
-        fill="#FFF"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
-        d="M1.336 22.4h10v-12z"
+        d="M14.17 13l-1.61 15h14.11l-12.5-15z"
+        fill="url(#mana_svg__paint1_linear)"
       />
+      <Path d="M1.67 28h12.5V13L1.67 28z" fill="#fff" />
       <Path
-        d="M1.6 25.6a18.25 18.25 0 0 0 3.8 3.2h22.8a18.25 18.25 0 0 0 3.8-3.2H1.6z"
+        d="M2 32a22.812 22.812 0 004.75 4h28.5A22.812 22.812 0 0040 32H2z"
         fill="#FC9965"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
       />
       <Path
-        d="M4 28.8c3.451 2.51 7.75 4 12.4 4s8.949-1.49 12.4-4H4z"
+        d="M5 36c4.314 3.138 9.688 5 15.5 5 5.813 0 11.186-1.862 15.5-5H5z"
         fill="#FF2D55"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
       />
       <Path
-        fill="url(#mana_svg__e)"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
-        d="M21.464 16.8l-1.25 8.8H28.8z"
+        d="M26.83 21l-1.562 11H36l-9.17-11z"
+        fill="url(#mana_svg__paint2_linear)"
       />
       <Path
-        d="M20.663 22.4H-1.728a15.639 15.639 0 0 0 2.074 3.2h20.326v-3.2h-.009z"
+        d="M25.829 28H-2.16c.69 1.43 1.569 2.77 2.592 4H25.84v-4h-.011z"
         fill="#FFBC5B"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
       />
+      <Path d="M17.67 32h9.16V21l-9.16 11z" fill="#fff" />
       <Path
-        fill="#FFF"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
-        d="M14.136 25.6h7.328v-8.8z"
-      />
-      <Circle
+        d="M26.83 18a5 5 0 100-10 5 5 0 000 10zM14.17 10a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"
         fill="#FFC95B"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
-        cx={21.464}
-        cy={10.4}
-        r={4}
-      />
-      <Circle
-        fill="#FFC95B"
-        fillRule="nonzero"
-        mask="url(#mana_svg__d)"
-        cx={11.336}
-        cy={6}
-        r={2}
       />
     </G>
+    <Defs>
+      <LinearGradient
+        id="mana_svg__paint0_linear"
+        x1={20}
+        y1={-8.284}
+        x2={-8.284}
+        y2={20}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#FF2D55" />
+        <Stop offset={1} stopColor="#FFBC5B" />
+      </LinearGradient>
+      <LinearGradient
+        id="mana_svg__paint1_linear"
+        x1={12.555}
+        y1={13}
+        x2={12.555}
+        y2={28}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#A524B3" />
+        <Stop offset={1} stopColor="#FF2D55" />
+      </LinearGradient>
+      <LinearGradient
+        id="mana_svg__paint2_linear"
+        x1={25.265}
+        y1={21}
+        x2={25.265}
+        y2={32}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#A524B3" />
+        <Stop offset={1} stopColor="#FF2D55" />
+      </LinearGradient>
+    </Defs>
   </Svg>
 );
 

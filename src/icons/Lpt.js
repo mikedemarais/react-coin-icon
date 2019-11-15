@@ -1,15 +1,20 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
 
 const SvgLpt = props => (
-  <Svg width={32} height={32} viewBox="0 0 32 32" {...props}>
-    <G fill="none" fillRule="evenodd">
-      <Circle fill="#03EB88" cx={16} cy={16} r={16} />
-      <Path
-        d="M22.204 17.094v-2.948h2.948v2.948h-2.948zm-13.004 0v-2.948h2.948v2.948H9.2zm0-6.946V7.2h2.948v2.948H9.2zM9.2 24v-2.948h2.948V24H9.2zm6.502-10.379v-2.948h2.948v2.948h-2.948zm0 6.946V17.62h2.948v2.948h-2.948z"
-        fill="#FFF"
-      />
-    </G>
+  <Svg width={40} height={40} fill="none" viewBox="0 0 32 32" {...props}>
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z"
+      fill="#03EB88"
+    />
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M11.5 26.315V30h3.685v-3.685H11.5zm0-8.632v3.685h3.685v-3.685H11.5zm16.255 0v3.685h3.685v-3.685h-3.685zM11.5 12.685V9h3.685v3.685H11.5zm8.127 4.341v-3.685h3.686v3.685h-3.686zm0 4.998v3.685h3.686v-3.685h-3.686z"
+      fill="#fff"
+    />
   </Svg>
 );
 

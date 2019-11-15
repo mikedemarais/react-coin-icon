@@ -29,7 +29,7 @@ const FallbackIcon = ({
   symbol = '',
   textStyles,
   width,
-  ...props,
+  ...props
 }) => {
   const symbolWithoutSpecialCharacters = symbol.replace(/[^a-zA-Z0-9]/g, '');
   const formattedSymbol = symbolWithoutSpecialCharacters.substring(0, (width < 30) ? 1 : 5);

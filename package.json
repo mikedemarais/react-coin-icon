@@ -1,6 +1,6 @@
 {
   "name": "react-coin-icon",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
@@ -34,13 +34,13 @@
     "@babel/preset-env": "^7.4.5",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
-    "babel-plugin-styled-components": "^1.10.1",
+    "babel-plugin-styled-components": "^1.10.6",
     "create-index": "^2.4.0",
-    "metro-react-native-babel-preset": "^0.54.1"
+    "metro-react-native-babel-preset": "^0.57.0"
   },
   "dependencies": {
     "@svgr/cli": "^4.3.0",
     "lodash": "^4.17.11",
-    "styled-components": "4.3.1"
+    "styled-components": "4.4.1"
   }
 }
