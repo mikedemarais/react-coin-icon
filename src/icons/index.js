@@ -155,6 +155,7 @@ export { default as Evx } from './Evx.js';
 export { default as Exmo } from './Exmo.js';
 export { default as Exp } from './Exp.js';
 export { default as Fair } from './Fair.js';
+export { default as Fame } from './Fame.js';
 export { default as Fct } from './Fct.js';
 export { default as Fil } from './Fil.js';
 export { default as Fjc } from './Fjc.js';
