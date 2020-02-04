@@ -7,10 +7,10 @@
   "license": "GPL-3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikedemarais/react-coin-icons.git"
+    "url": "https://github.com/mikedemarais/react-coin-icon.git"
   },
   "bugs": {
-    "url": "https://github.com/mikedemarais/react-coin-icons/issues"
+    "url": "https://github.com/mikedemarais/react-coin-icon/issues"
   },
   "scripts": {
     "clear-icons": "rm -f src/icons/*",
