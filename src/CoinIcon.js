@@ -32,6 +32,7 @@ const CoinIcon = ({
         height: size,
         symbol: formattedSymbol,
         width: size,
+        ...props,
       })}
     </Container>
   );
