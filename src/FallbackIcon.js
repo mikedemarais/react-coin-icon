@@ -4,9 +4,10 @@ import styled from 'styled-components/primitives';
 
 const buildFallbackFontSize = ({ symbol, width }) => {
   if (!symbol) return 0;
-  else if ((width < 30) || (symbol.length === 4)) return 11;
-  else if (symbol.length > 4) return 9;
-  return 13;
+  else if (width < 30 || symbol.length > 4) return 8;
+  else if (symbol.length === 4) return 10;
+  else if (symbol.length === 1 || symbol.length === 2) return 13;
+  return 11;
 };
 
 const Container = styled.View`
