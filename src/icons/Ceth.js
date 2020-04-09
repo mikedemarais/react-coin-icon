@@ -10,11 +10,10 @@ const SvgCeth = props => (
       fill="url(#ceth_svg__paint0_linear)"
     />
     <Path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M20 24.183l-8.3-4.91L20 6.2l8.3 13.072-8.3 4.91zm0 8.616L11.7 21.1l8.3 4.91 8.298-4.91L20 32.8z"
-      fill="#fff"
+      d="M11.7 21.101l8.3 4.91 8.298-4.91L20 32.8 11.7 21.1z"
+      fill="url(#ceth_svg__paint1_linear)"
     />
+    <Path d="M20 24.183l-8.3-4.91L20 6.2l8.3 13.072-8.3 4.91z" fill="#fff" />
     <Defs>
       <LinearGradient
         id="ceth_svg__paint0_linear"
@@ -26,6 +25,17 @@ const SvgCeth = props => (
       >
         <Stop stopColor="#02D396" />
         <Stop offset={1} stopColor="#9669ED" />
+      </LinearGradient>
+      <LinearGradient
+        id="ceth_svg__paint1_linear"
+        x1={19.999}
+        y1={21.101}
+        x2={19.999}
+        y2={32.799}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#fff" />
+        <Stop offset={1} stopColor="#fff" stopOpacity={0.9} />
       </LinearGradient>
     </Defs>
   </Svg>

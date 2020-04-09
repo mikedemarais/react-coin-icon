@@ -1,6 +1,6 @@
 {
   "name": "react-coin-icon",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
