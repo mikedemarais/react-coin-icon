@@ -1,52 +1,52 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled from 'styled-components/primitives';
+import PropTypes from "prop-types";
+import React, { useMemo } from "react";
+import { StyleSheet, Text, View } from "react-primitives";
 
-const buildFallbackFontSize = ({ symbol, width }) => {
+const sx = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    height: "100%",
+    justifyContent: "center",
+    overflow: "hidden",
+    width: "100%",
+  },
+  text: {
+    color: "#ffffff",
+    fontWeight: '600',
+    textTransform: "uppercase",
+  },
+});
+
+function buildFallbackFontSize(symbol, width) {
   if (!symbol) return 0;
   else if (width < 30 || symbol.length > 4) return 8;
   else if (symbol.length === 4) return 10;
   else if (symbol.length === 1 || symbol.length === 2) return 13;
   return 11;
-};
+}
 
-const Container = styled.View`
-  align-items: center;
-  background-color: ${({ bgColor }) => bgColor};
-  height: 100%;
-  justify-content: center;
-  width: 100%;
-`;
+function formatSymbol(symbol, width) {
+  if (!symbol) return "";
+  return symbol.replace(/[^a-zA-Z0-9]/g, "").substring(0, width < 30 ? 1 : 5);
+}
 
-const Text = styled.Text`
-  color: #ffffff;
-  font-size: ${buildFallbackFontSize}px;
-  font-weight: 600;
-  text-transform: uppercase;
-  ${({ textStyles}) => textStyles}
-`;
+const FallbackIcon = ({ bgColor, symbol = "", textStyles, width, ...props }) => {
+  const formattedSymbol = useMemo(() => formatSymbol(symbol, width), [
+    symbol,
+    width,
+  ]);
 
-const FallbackIcon = ({
-  symbol = '',
-  textStyles,
-  width,
-  ...props
-}) => {
-  const symbolWithoutSpecialCharacters = symbol.replace(/[^a-zA-Z0-9]/g, '');
-  const formattedSymbol = symbolWithoutSpecialCharacters.substring(0, (width < 30) ? 1 : 5);
+  const fontSize = useMemo(
+    () => ({ fontSize: buildFallbackFontSize(formattedSymbol, width) }),
+    [formattedSymbol, width]
+  );
 
   return (
-    <Container {...props}>
-      <Text
-        symbol={formattedSymbol}
-        textStyles={textStyles}
-        width={width}
-      >
-        {formattedSymbol}
-      </Text>
-    </Container>
+    <View {...props} backgroundColor={bgColor} style={sx.container}>
+      <Text style={[sx.text, fontSize, textStyles]}>{formattedSymbol}</Text>
+    </View>
   );
-}
+};
 
 FallbackIcon.propTypes = {
   bgColor: PropTypes.string,
@@ -55,10 +55,14 @@ FallbackIcon.propTypes = {
     PropTypes.arrayOf(PropTypes.string),
     PropTypes.string,
   ]),
+  width: PropTypes.number,
 };
 
 FallbackIcon.defaultProps = {
-  bgColor: '#3A3D51',
+  bgColor: "#3A3D51",
 };
 
-export default React.memo(FallbackIcon);
+const arePropsEqual = (prev, next) =>
+  prev.bgColor === next.bgColor && prev.symbol === next.symbol;
+
+export default React.memo(FallbackIcon, arePropsEqual);

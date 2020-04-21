@@ -1,47 +1,58 @@
-import { toLower, upperFirst } from 'lodash';
-import PropTypes from 'prop-types';
-import React, { createElement } from 'react';
-import styled from 'styled-components/primitives';
-import FallbackIcon from './FallbackIcon';
-import * as CoinIcons from './icons';
+import PropTypes from "prop-types";
+import React, { createElement } from "react";
+import { StyleSheet, View } from "react-primitives";
+import FallbackIcon from "./FallbackIcon";
+import * as CoinIcons from "./icons";
 
-const Container = styled.View`
-  align-items: center;
-  background-color: #f7f7f8;
-  border-radius: ${({ size }) => (size / 2)};
-  height: ${({ size }) => (size)};
-  justify-content: center;
-  overflow: hidden;
-  width: ${({ size }) => (size)};
-`;
+const sx = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    backgroundColor: "#f7f7f8",
+    justifyContent: "center",
+    overflow: "hidden",
+  },
+});
+
+function formatSymbol(symbol) {
+  if (!symbol) return "";
+  return symbol.charAt(0).toUpperCase() + symbol.slice(1).toLowerCase();
+}
 
 const CoinIcon = ({
   bgColor,
   fallbackRenderer,
   size,
+  style,
   symbol,
   ...props
 }) => {
-  const formattedSymbol = upperFirst(toLower(symbol));
-  const renderer = CoinIcons[formattedSymbol] || fallbackRenderer;
+  const formattedSymbol = formatSymbol(symbol);
 
   return (
-    <Container {...props} size={size}>
-      {createElement(renderer, {
+    <View
+      {...props}
+      borderRadius={size / 2}
+      height={size}
+      style={[sx.container, style]}
+      width={size}
+    >
+      {createElement(CoinIcons[formattedSymbol] || fallbackRenderer, {
         bgColor,
         height: size,
+        style,
         symbol: formattedSymbol,
         width: size,
         ...props,
       })}
-    </Container>
+    </View>
   );
-}
+};
 
 CoinIcon.propTypes = {
   bgColor: PropTypes.string,
   fallbackRenderer: PropTypes.func.isRequired,
   size: PropTypes.number.isRequired,
+  style: PropTypes.object,
   symbol: PropTypes.string.isRequired,
 };
 
@@ -50,4 +61,9 @@ CoinIcon.defaultProps = {
   size: 32,
 };
 
-export default React.memo(CoinIcon);
+const arePropsEqual = (prev, next) =>
+  prev.bgColor === next.bgColor &&
+  prev.size === next.size &&
+  prev.symbol === next.symbol;
+
+export default React.memo(CoinIcon, arePropsEqual);
