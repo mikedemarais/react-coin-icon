@@ -1,6 +1,6 @@
 {
   "name": "react-coin-icon",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "Cross-platform component that displays an icon for a given cryptocurrency symbol",
   "author": "Michael Demarais",
   "main": "lib/index.js",
@@ -17,6 +17,7 @@
     "build": "npm run svg-to-react && npm run build:js",
     "build:js": "babel src --out-dir lib",
     "prepublish": "npm run build",
+    "prettify": "yarn prettier --write \"./src/*.js\"",
     "svg-originals": "svgr --config-file originals-svgr.config.js -d ./src/icons ./assets/originals",
     "svg-overrides": "svgr --config-file overrides-svgr.config.js -d ./src/icons ./assets/overrides",
     "svg-to-react": "npm run svg-originals && npm run svg-overrides && create-index ./src/icons"
@@ -24,8 +25,11 @@
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "*",
+    "react-art": "*",
+    "react-dom": "*",
     "react-native": "*",
-    "react-native-svg": "*"
+    "react-native-svg": "*",
+    "react-native-web": "*"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -33,14 +37,12 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "babel-loader": "^8.0.6",
-    "babel-plugin-lodash": "^3.3.4",
-    "babel-plugin-styled-components": "^1.10.6",
     "create-index": "^2.4.0",
-    "metro-react-native-babel-preset": "^0.57.0"
+    "metro-react-native-babel-preset": "^0.59.0",
+    "prettier": "^2.0.1"
   },
   "dependencies": {
     "@svgr/cli": "^4.3.0",
-    "lodash": "^4.17.11",
-    "styled-components": "4.4.1"
+    "react-primitives": "^0.8.1"
   }
 }
