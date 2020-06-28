@@ -92,6 +92,7 @@ export { default as Cnx } from './Cnx.js';
 export { default as Cny } from './Cny.js';
 export { default as Cob } from './Cob.js';
 export { default as Colx } from './Colx.js';
+export { default as Comp } from './Comp.js';
 export { default as Coqui } from './Coqui.js';
 export { default as Cred } from './Cred.js';
 export { default as Crep } from './Crep.js';
