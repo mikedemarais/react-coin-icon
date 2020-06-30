@@ -297,6 +297,7 @@ export { default as Part } from './Part.js';
 export { default as Pasc } from './Pasc.js';
 export { default as Pasl } from './Pasl.js';
 export { default as Pax } from './Pax.js';
+export { default as Paxg } from './Paxg.js';
 export { default as Pay } from './Pay.js';
 export { default as Payx } from './Payx.js';
 export { default as Pink } from './Pink.js';
