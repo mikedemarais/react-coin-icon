@@ -327,6 +327,7 @@ export { default as Qtum } from './Qtum.js';
 export { default as R } from './R.js';
 export { default as Rads } from './Rads.js';
 export { default as Rap } from './Rap.js';
+export { default as Rari } from './Rari.js';
 export { default as Rcn } from './Rcn.js';
 export { default as Rdai } from './Rdai.js';
 export { default as Rdd } from './Rdd.js';
