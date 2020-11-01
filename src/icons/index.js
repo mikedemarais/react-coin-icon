@@ -408,7 +408,6 @@ export { default as Tusd } from './Tusd.js';
 export { default as Tzc } from './Tzc.js';
 export { default as Ubq } from './Ubq.js';
 export { default as Uma } from './Uma.js';
-export { default as Uni } from './Uni.js';
 export { default as UniV1Dai } from './UniV1Dai.js';
 export { default as UniV1Sai } from './UniV1Sai.js';
 export { default as Unity } from './Unity.js';
