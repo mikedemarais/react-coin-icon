@@ -20,13 +20,16 @@ function formatSymbol(symbol) {
 const CoinIcon = ({
   bgColor,
   fallbackRenderer = FallbackIcon,
+  forceFallback,
   size = 32,
   style,
   symbol,
   ...props
 }) => {
   const formattedSymbol = formatSymbol(symbol);
-  const CoinIconElement = CoinIcons[formattedSymbol] || fallbackRenderer;
+  const CoinIconElement = forceFallback
+    ? fallbackRenderer
+    : CoinIcons[formattedSymbol] || fallbackRenderer;
 
   return (
     <View
