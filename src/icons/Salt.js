@@ -12,7 +12,7 @@ const SvgSalt = props => (
     <Path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M10 28.303L20 7.25l10 21.053H10zm16.11-2.465L20 12.982l-6.11 12.856h12.22z"
+      d="M10 28.553L20 7.5l10 21.053H10zm16.11-2.465L20 13.232l-6.11 12.856h12.22z"
       fill="#fff"
     />
   </Svg>

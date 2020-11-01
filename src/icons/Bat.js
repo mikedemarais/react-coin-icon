@@ -12,7 +12,7 @@ const SvgBat = props => (
     <Path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M20.061 7.5L8 27.9l24-.028L20.061 7.5zm-4.958 16.4l4.93-8.144 4.952 8.143h-9.882z"
+      d="M20.061 7.6L8 28l24-.028L20.061 7.6zM15.103 24l4.93-8.144 4.952 8.143h-9.882z"
       fill="#fff"
     />
   </Svg>

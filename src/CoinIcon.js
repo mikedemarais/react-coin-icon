@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import React, { createElement } from "react";
+import React from "react";
 import { StyleSheet, View } from "react-primitives";
 import FallbackIcon from "./FallbackIcon";
 import * as CoinIcons from "./icons";
@@ -20,13 +19,14 @@ function formatSymbol(symbol) {
 
 const CoinIcon = ({
   bgColor,
-  fallbackRenderer,
-  size,
+  fallbackRenderer = FallbackIcon,
+  size = 32,
   style,
   symbol,
   ...props
 }) => {
   const formattedSymbol = formatSymbol(symbol);
+  const CoinIconElement = CoinIcons[formattedSymbol] || fallbackRenderer;
 
   return (
     <View
@@ -36,29 +36,16 @@ const CoinIcon = ({
       style={[sx.container, style]}
       width={size}
     >
-      {createElement(CoinIcons[formattedSymbol] || fallbackRenderer, {
-        bgColor,
-        height: size,
-        style,
-        symbol: formattedSymbol,
-        width: size,
-        ...props,
-      })}
+      <CoinIconElement
+        bgColor={bgColor}
+        height={size}
+        style={style}
+        symbol={formattedSymbol}
+        width={size}
+        {...props}
+      />
     </View>
   );
-};
-
-CoinIcon.propTypes = {
-  bgColor: PropTypes.string,
-  fallbackRenderer: PropTypes.func.isRequired,
-  size: PropTypes.number.isRequired,
-  style: PropTypes.object,
-  symbol: PropTypes.string.isRequired,
-};
-
-CoinIcon.defaultProps = {
-  fallbackRenderer: FallbackIcon,
-  size: 32,
 };
 
 const arePropsEqual = (prev, next) =>

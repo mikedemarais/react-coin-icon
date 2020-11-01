@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React, { useMemo } from "react";
 import { StyleSheet, Text, View } from "react-primitives";
 
@@ -30,7 +29,7 @@ function formatSymbol(symbol, width) {
   return symbol.replace(/[^a-zA-Z0-9]/g, "").substring(0, width < 30 ? 1 : 5);
 }
 
-const FallbackIcon = ({ bgColor, symbol = "", textStyles, width, ...props }) => {
+const FallbackIcon = ({ bgColor = "#3A3D51", symbol = "", textStyles, width, ...props }) => {
   const formattedSymbol = useMemo(() => formatSymbol(symbol, width), [
     symbol,
     width,
@@ -46,20 +45,6 @@ const FallbackIcon = ({ bgColor, symbol = "", textStyles, width, ...props }) => 
       <Text style={[sx.text, fontSize, textStyles]}>{formattedSymbol}</Text>
     </View>
   );
-};
-
-FallbackIcon.propTypes = {
-  bgColor: PropTypes.string,
-  symbol: PropTypes.string,
-  textStyles: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.string),
-    PropTypes.string,
-  ]),
-  width: PropTypes.number,
-};
-
-FallbackIcon.defaultProps = {
-  bgColor: "#3A3D51",
 };
 
 const arePropsEqual = (prev, next) =>
