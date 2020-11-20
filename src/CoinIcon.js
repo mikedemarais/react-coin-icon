@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { StyleSheet, View } from "react-primitives";
 import FallbackIcon from "./FallbackIcon";
 import * as CoinIcons from "./icons";
@@ -6,45 +6,62 @@ import * as CoinIcons from "./icons";
 const sx = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroundColor: "#f7f7f8",
     justifyContent: "center",
-    overflow: "hidden",
   },
 });
 
-function formatSymbol(symbol) {
-  if (!symbol) return "";
-  return symbol.charAt(0).toUpperCase() + symbol.slice(1).toLowerCase();
-}
-
 const CoinIcon = ({
-  bgColor,
+  color = "#3A3D51",
   fallbackRenderer = FallbackIcon,
   forceFallback,
+  shadowColor,
   size = 32,
   style,
   symbol,
   ...props
 }) => {
-  const formattedSymbol = formatSymbol(symbol);
+  const formattedSymbol = useMemo(
+    () =>
+      symbol
+        ? symbol.charAt(0).toUpperCase() + symbol.slice(1).toLowerCase()
+        : "",
+    [symbol]
+  );
+
+  const circleProps = useMemo(
+    () => ({
+      borderRadius: size / 2,
+      height: size,
+      width: size,
+    }),
+    [size]
+  );
+
+  const shadowProps = useMemo(() => {
+    const isSmall = size < 30;
+
+    return {
+      shadowColor: shadowColor || color,
+      shadowOffset: {
+        height: isSmall ? 3 : 4,
+        width: 0,
+      },
+      shadowOpacity: isSmall ? 0.2 : 0.3,
+      shadowRadius: isSmall ? 9 : 12,
+    };
+  }, [color, shadowColor, size]);
+
   const CoinIconElement = forceFallback
     ? fallbackRenderer
     : CoinIcons[formattedSymbol] || fallbackRenderer;
 
   return (
-    <View
-      {...props}
-      borderRadius={size / 2}
-      height={size}
-      style={[sx.container, style]}
-      width={size}
-    >
+    <View {...circleProps} {...shadowProps} style={[sx.container, style]}>
       <CoinIconElement
-        bgColor={bgColor}
-        height={size}
-        style={style}
+        {...circleProps}
+        color={color}
+        overflow="hidden"
         symbol={formattedSymbol}
-        width={size}
         {...props}
       />
     </View>
@@ -52,7 +69,7 @@ const CoinIcon = ({
 };
 
 const arePropsEqual = (prev, next) =>
-  prev.bgColor === next.bgColor &&
+  prev.color === next.color &&
   prev.size === next.size &&
   prev.symbol === next.symbol;
 

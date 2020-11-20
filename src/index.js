@@ -1,4 +1,4 @@
-import CoinIcon from './CoinIcon';
+import CoinIcon from "./CoinIcon";
 
-export { default as FallbackIcon } from './FallbackIcon';
+export { default as FallbackIcon } from "./FallbackIcon";
 export default CoinIcon;
