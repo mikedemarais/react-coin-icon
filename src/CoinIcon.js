@@ -47,7 +47,7 @@ const CoinIcon = ({
         width: 0,
       },
       shadowOpacity: isSmall ? 0.2 : 0.3,
-      shadowRadius: isSmall ? 9 : 12,
+      shadowRadius: isSmall ? 4.5 : 6,
     };
   }, [color, shadowColor, size]);
 
