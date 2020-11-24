@@ -1,15 +1,31 @@
 import React from "react";
-import Svg, { G, Circle, Path } from "react-native-svg";
+import Svg, { Path, Defs, LinearGradient, Stop } from "react-native-svg";
 
 const SvgLend = props => (
-  <Svg height={40} width={40} viewBox="0 0 32 32" {...props}>
-    <G fill="none">
-      <Circle cx={16} cy={16} fill="#0fa9c9" r={16} />
-      <Path
-        d="M17.147 20.446L11.697 26l-1.554-1.705 3.777-3.85L10 16.452l1.673-1.706zm3.18-3.191L22 15.549l-3.92-3.995 3.777-3.849L20.303 6l-5.474 5.554zm-7.96-3.167l5.498 5.7 1.673-1.705-5.498-5.603z"
-        fill="#fff"
-      />
-    </G>
+  <Svg width={40} height={40} fill="none" viewBox="0 0 40 40" {...props}>
+    <Path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M20 40c11.046 0 20-8.954 20-20S31.046 0 20 0 0 8.954 0 20s8.954 20 20 20z"
+      fill="url(#lend_svg__paint0_linear)"
+    />
+    <Path
+      d="M28 9.023L25.773 6.8l-7.433 7.433 7.433 7.436L28 19.444l-5.21-5.21L28 9.023zM21.66 25.772l-7.433-7.437L12 20.562l5.21 5.21-5.21 5.21 2.227 2.222 7.433-7.432zM17.39 15.174l7.435 7.435-2.216 2.216-7.435-7.435 2.216-2.216z"
+      fill="#fff"
+    />
+    <Defs>
+      <LinearGradient
+        id="lend_svg__paint0_linear"
+        x1={0}
+        y1={20}
+        x2={40}
+        y2={20}
+        gradientUnits="userSpaceOnUse"
+      >
+        <Stop stopColor="#01AEC9" />
+        <Stop offset={1} stopColor="#1E8FCA" />
+      </LinearGradient>
+    </Defs>
   </Svg>
 );
 

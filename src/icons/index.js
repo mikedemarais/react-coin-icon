@@ -1,5 +1,6 @@
 // @create-index
 
+export { default as Aave } from './Aave.js';
 export { default as Abt } from './Abt.js';
 export { default as Act } from './Act.js';
 export { default as Actn } from './Actn.js';
@@ -14,6 +15,7 @@ export { default as Agrs } from './Agrs.js';
 export { default as Aion } from './Aion.js';
 export { default as Amb } from './Amb.js';
 export { default as Amp } from './Amp.js';
+export { default as Ampl } from './Ampl.js';
 export { default as Ant } from './Ant.js';
 export { default as Apex } from './Apex.js';
 export { default as Appc } from './Appc.js';
@@ -344,6 +346,7 @@ export { default as Rhoc } from './Rhoc.js';
 export { default as Ric } from './Ric.js';
 export { default as Rise } from './Rise.js';
 export { default as Rlc } from './Rlc.js';
+export { default as Rook } from './Rook.js';
 export { default as Rpl } from './Rpl.js';
 export { default as Rpx } from './Rpx.js';
 export { default as Rub } from './Rub.js';
@@ -408,8 +411,6 @@ export { default as Tusd } from './Tusd.js';
 export { default as Tzc } from './Tzc.js';
 export { default as Ubq } from './Ubq.js';
 export { default as Uma } from './Uma.js';
-export { default as UniV1Dai } from './UniV1Dai.js';
-export { default as UniV1Sai } from './UniV1Sai.js';
 export { default as Unity } from './Unity.js';
 export { default as Usd } from './Usd.js';
 export { default as Usdc } from './Usdc.js';
