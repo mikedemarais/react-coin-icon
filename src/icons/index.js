@@ -31,7 +31,6 @@ export { default as Audr } from './Audr.js';
 export { default as Auto } from './Auto.js';
 export { default as Aywa } from './Aywa.js';
 export { default as Bab } from './Bab.js';
-export { default as Based } from './Based.js';
 export { default as Bat } from './Bat.js';
 export { default as Bay } from './Bay.js';
 export { default as Bcbc } from './Bcbc.js';
