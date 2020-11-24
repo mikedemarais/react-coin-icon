@@ -359,7 +359,6 @@ export { default as San } from './San.js';
 export { default as Sbd } from './Sbd.js';
 export { default as Sberbank } from './Sberbank.js';
 export { default as Sc } from './Sc.js';
-export { default as Set } from './Set.js';
 export { default as Seth } from './Seth.js';
 export { default as Shift } from './Shift.js';
 export { default as Sib } from './Sib.js';
