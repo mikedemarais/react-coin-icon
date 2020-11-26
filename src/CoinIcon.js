@@ -56,11 +56,11 @@ const CoinIcon = ({
     : CoinIcons[formattedSymbol] || fallbackRenderer;
 
   return (
-    <View {...circleProps} {...shadowProps} style={[sx.container, style]}>
+    <View {...circleProps} style={[sx.container, style]}>
       <CoinIconElement
         {...circleProps}
+        {...shadowProps}
         color={color}
-        overflow="hidden"
         symbol={formattedSymbol}
         {...props}
       />
