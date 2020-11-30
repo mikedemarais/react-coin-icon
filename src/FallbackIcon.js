@@ -5,7 +5,6 @@ const sx = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    overflow: "hidden",
   },
   text: {
     color: "#ffffff",
