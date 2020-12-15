@@ -1,0 +1,12 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="url(#paint0_linear)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 38C29.9411 38 38 29.9411 38 20C38 10.0589 29.9411 2 20 2C10.0589 2 2 10.0589 2 20C2 29.9411 10.0589 38 20 38Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 36C28.8366 36 36 28.8366 36 20C36 11.1634 28.8366 4 20 4C11.1634 4 4 11.1634 4 20C4 28.8366 11.1634 36 20 36Z" fill="#F0B90B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.1906 15.936L20.0066 9.12L22.7243 11.8378L15.9083 18.6538L13.1906 15.936ZM13.1955 24.081L24.0882 13.1883L26.8059 15.9061L15.9133 26.7987L13.1955 24.081ZM28.1621 17.2699L17.2694 28.1626L19.987 30.88L30.88 19.9875L28.1621 17.2699ZM9.12 20.0058L11.8378 17.288L14.5555 20.0058L11.8378 22.7235L9.12 20.0058Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear" x1="36.28" y1="9.08" x2="6.52" y2="34.12" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B6509E"/>
+<stop offset="1" stop-color="#2EBAC6"/>
+</linearGradient>
+</defs>
+</svg>
