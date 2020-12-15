@@ -10,6 +10,12 @@ const sx = StyleSheet.create({
   },
 });
 
+function formatSymbol(symbol) {
+  return symbol
+    ? symbol.charAt(0).toUpperCase() + symbol.slice(1).toLowerCase()
+    : "";
+}
+
 const CoinIcon = ({
   color = "#3A3D51",
   fallbackRenderer = FallbackIcon,
@@ -20,13 +26,7 @@ const CoinIcon = ({
   symbol,
   ...props
 }) => {
-  const formattedSymbol = useMemo(
-    () =>
-      symbol
-        ? symbol.charAt(0).toUpperCase() + symbol.slice(1).toLowerCase()
-        : "",
-    [symbol]
-  );
+  const formattedSymbol = useMemo(() => formatSymbol(symbol), [symbol]);
 
   const circleProps = useMemo(
     () => ({
@@ -41,6 +41,7 @@ const CoinIcon = ({
     const isSmall = size < 30;
 
     return {
+      elevation: isSmall ? 4.5 : 6,
       shadowColor: shadowColor || color,
       shadowOffset: {
         height: isSmall ? 3 : 4,
