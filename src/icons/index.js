@@ -487,6 +487,7 @@ export { default as Xvc } from './Xvc.js';
 export { default as Xvg } from './Xvg.js';
 export { default as Xzc } from './Xzc.js';
 export { default as Yoyow } from './Yoyow.js';
+export { default as Yup } from './Yup.js';
 export { default as Zcl } from './Zcl.js';
 export { default as Zec } from './Zec.js';
 export { default as Zel } from './Zel.js';
