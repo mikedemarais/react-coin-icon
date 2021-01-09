@@ -399,6 +399,7 @@ export { default as Srn } from './Srn.js';
 export { default as Stak } from './Stak.js';
 export { default as Start } from './Start.js';
 export { default as Steem } from './Steem.js';
+export { default as Steth } from './Steth.js';
 export { default as Storj } from './Storj.js';
 export { default as Storm } from './Storm.js';
 export { default as Stq } from './Stq.js';
