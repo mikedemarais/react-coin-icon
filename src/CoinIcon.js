@@ -71,6 +71,7 @@ const CoinIcon = ({
 
 const arePropsEqual = (prev, next) =>
   prev.color === next.color &&
+  prev.shadowColor === next.shadowColor &&
   prev.size === next.size &&
   prev.symbol === next.symbol;
 
