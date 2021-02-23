@@ -59,6 +59,9 @@ const FallbackIcon = ({
 };
 
 const arePropsEqual = (prev, next) =>
-  prev.color === next.color && prev.symbol === next.symbol;
+  prev.color === next.color &&
+  prev.shadowColor === next.shadowColor &&
+  prev.size === next.size &&
+  prev.symbol === next.symbol;
 
 export default React.memo(FallbackIcon, arePropsEqual);
