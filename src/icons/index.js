@@ -180,6 +180,7 @@ export { default as Eqli } from './Eqli.js';
 export { default as Equa } from './Equa.js';
 export { default as Etc } from './Etc.js';
 export { default as Eth } from './Eth.js';
+export { default as Eth2XFli } from './Eth2XFli.js';
 export { default as Ethos } from './Ethos.js';
 export { default as Etn } from './Etn.js';
 export { default as Etp } from './Etp.js';
