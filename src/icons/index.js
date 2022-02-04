@@ -134,7 +134,6 @@ export { default as D } from './D.js';
 export { default as Dai } from './Dai.js';
 export { default as Dash } from './Dash.js';
 export { default as Dat } from './Dat.js';
-export { default as Data } from './Data.js';
 export { default as Dbc } from './Dbc.js';
 export { default as Dcn } from './Dcn.js';
 export { default as Dcr } from './Dcr.js';
