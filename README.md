@@ -11,3 +11,6 @@ Icons are predominantly sourced from https://github.com/hyperdexapp/cryptocurren
 brew install librsvg
 ```
 
+```bash
+yarn svg-to-png
+```
