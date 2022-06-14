@@ -14,7 +14,7 @@ for i in *.svg;do
     name=`echo $i | awk '{ print toupper( substr( $0, 1, 1 ) ) substr( $0, 2 ); }'`;
     line=`echo export { default as \"${name%.*}\" } from \'./${i%.*}.png\'\;`
     echo $line >> ../../lib/pngs/index.js
-    rsvg-convert -h 100 -o ${i%.*}.png $i
+    rsvg-convert -h 150 -o ${i%.*}.png $i
     mv ${i%.*}.png ../../lib/pngs
 done
 
@@ -26,7 +26,7 @@ for i in *.svg;do
     name=`echo $i | awk '{ print toupper( substr( $0, 1, 1 ) ) substr( $0, 2 ); }'`;
     line=`echo export { default as \"${name%.*}\" } from \'./${i%.*}.png\'\;`
     echo $line >> ../../lib/pngs/index.js
-    rsvg-convert -h 100 -o ${i%.*}.png $i
+    rsvg-convert -h 150 -o ${i%.*}.png $i
     mv ${i%.*}.png ../../lib/pngs
 done
 
